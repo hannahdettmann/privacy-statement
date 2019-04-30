@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Button,
   Image,
+  Input,
   Platform,
   ScrollView,
   StyleSheet,
@@ -47,6 +48,8 @@ export default class HomeScreen extends React.Component {
               color="#841584"
               accessibilityLabel="Learn more about this purple button"
             />
+
+
           </View>
 
           
@@ -56,6 +59,9 @@ export default class HomeScreen extends React.Component {
     );
   }
 
+_takeInput = () => {
+    return 0;
+  };
 
   _maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {

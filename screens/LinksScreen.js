@@ -1,6 +1,8 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Input, Text } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+//import { withStyles } from '@material-ui/core/styles';
+//import Slider from '@material-ui/lab/Slider';
 
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
@@ -10,20 +12,17 @@ export default class LinksScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        onInput() {
-    var input = document.getElementById("typeinp");
-    var currentVal = input.value;
-    this.setState({
-      value: currentVal
-    })
-}
-
-<input id="typeinp" type="range" min="0" max="5" step="1" defaultValue="3" onInput={return 0}/>
-        
+        <Text style={styles.getStartedText}>
+              Welcome to Safe+Driving! Here, you can choose your level 
+            </Text>
       </ScrollView>
     );
   }
 }
+
+ _takeInput = () => {
+    return 0;
+  };
 
 const styles = StyleSheet.create({
   container: {
