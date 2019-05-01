@@ -42,9 +42,29 @@ export default class HomeScreen extends React.Component {
               Welcome to Safe+Driving! Before starting, we need to walk through the privacy statement.
             </Text>
             
-            <Button
+            <Button style={styles.button}
               onPress={this._handleStartPress}
-              title="Start"
+              title="1st Statement"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+
+            <Text style={styles.getStartedText}>
+            </Text>
+            
+            <Button style={styles.button}
+              onPress={this._handleSecondPress}
+              title="2nd Statement"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
+
+            <Text style={styles.getStartedText}>
+            </Text>
+            
+            <Button style={styles.button}
+              onPress={this._handleThirdPress}
+              title="3rd Statement"
               color="#841584"
               accessibilityLabel="Learn more about this purple button"
             />
@@ -93,6 +113,14 @@ _handleStartPress = () => {
     WebBrowser.openBrowserAsync('https://charles-carlson.github.io/privacy/');
   };
 
+  _handleSecondPress = () => {
+    WebBrowser.openBrowserAsync('https://charles-carlson.github.io/privacy/slider.html');
+  };
+
+  _handleThirdPress = () => {
+    WebBrowser.openBrowserAsync('https://charles-carlson.github.io/privacy/buttons.html');
+  };
+
   _handleHelpPress = () => {
     WebBrowser.openBrowserAsync(
       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
@@ -104,6 +132,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  button: {
+    marginTop: 30,
   },
   developmentModeText: {
     marginBottom: 20,
@@ -147,6 +178,7 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
+    marginBottom: 30,
   },
   tabBarInfoContainer: {
     position: 'absolute',
